@@ -1,8 +1,8 @@
 import { MarkerType } from "../types/index";
 
 export const center: google.maps.LatLngLiteral = {
-  lat: 51.5074, // Latitude for the center (e.g., London)
-  lng: -0.1278, // Longitude for the center
+  lat: 51.5074,
+  lng: -0.1278,
 };
 
 export const defaultMarker: MarkerType = {

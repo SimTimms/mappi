@@ -1,6 +1,17 @@
-async function getCityService(): Promise<[]> {
+import { CityType } from "../../../../types";
+
+async function getCityService(): Promise<CityType[]> {
   try {
-    const cities: [] = [];
+    const cities: CityType[] = [
+      {
+        _id: "1",
+        cityName: "Test Town",
+        coordinates: {
+          type: "Point",
+          coordinates: [12.34, 56.78],
+        },
+      },
+    ];
     return cities;
   } catch (error) {
     throw error;

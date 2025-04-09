@@ -16,7 +16,7 @@ const startServer = async (): Promise<void> => {
     const server = new ApolloServer({
       typeDefs,
       resolvers,
-      introspection: process.env.ENABLE_GRAPHIQL === "true",
+      introspection: true,
     });
 
     const { url } = await startStandaloneServer(server, {
