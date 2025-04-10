@@ -3,8 +3,24 @@ export type CoordinateType = {
   coordinates: [number, number];
 };
 
-export type CityType = {
-  _id: "1";
-  cityName: "Test Town";
+export type WeatherType = {
+  weatherType: string;
   coordinates: CoordinateType;
+};
+
+export type APIResponseType = {
+  location: {
+    name: string;
+    region: string;
+    country: string;
+    lat: number;
+    lon: number;
+  };
+  current: {
+    temp_c: number;
+    condition: {
+      text: string;
+      icon: string;
+    };
+  };
 };

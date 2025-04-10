@@ -15,12 +15,12 @@ const typeDefs = `#graphql
     }
 
 ############################
-### CITY SCHEMA
+### WEATHER SCHEMA
 ############################
 
-    type City{
+    type Weather{
         _id: ID!
-        cityName: String!
+        weatherType: String!
         coordinates: GeoJSON!
     }
 
@@ -29,7 +29,7 @@ const typeDefs = `#graphql
 ############################
 
     type Query{
-        getCities:[City]
+        getWeather:[Weather]
     }
         
 `;

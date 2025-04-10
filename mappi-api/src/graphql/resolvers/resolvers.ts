@@ -1,8 +1,8 @@
-import { cityResolversQuery } from "./city/cityResolvers";
+import { weatherResolversQuery } from "./weather/weatherResolvers";
 
 const resolvers = {
   Query: {
-    ...cityResolversQuery,
+    ...weatherResolversQuery,
   },
 };
 
