@@ -5,10 +5,16 @@ export type CoordinateType = {
 
 export type WeatherType = {
   weatherType: string;
+  icon: string;
   coordinates: CoordinateType;
+  tide: {
+    tide_type: string;
+    tide_height_mt: string;
+    tide_time: string;
+  }[];
 };
 
-export type APIResponseType = {
+export type WeatherAPIResponseType = {
   location: {
     name: string;
     region: string;
@@ -22,5 +28,23 @@ export type APIResponseType = {
       text: string;
       icon: string;
     };
+  };
+};
+
+export type TideAPIResponseType = {
+  forecast: {
+    forecastday: [
+      {
+        day: {
+          tides: {
+            tide: {
+              tide_type: string;
+              tide_height_mt: string;
+              tide_time: string;
+            }[];
+          }[];
+        };
+      },
+    ];
   };
 };

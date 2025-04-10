@@ -1,9 +1,12 @@
-import { getWeatherService } from "./services";
+import weatherService from "../../../services/weatherService";
 import { WeatherType } from "../../../types";
 
 const weatherResolversQuery = {
-  getWeather: async (): Promise<WeatherType[] | null> => {
-    return await getWeatherService();
+  getWeather: async (
+    _: unknown,
+    { locationName }: { locationName: string }
+  ): Promise<WeatherType | null> => {
+    return await weatherService(locationName);
   },
 };
 

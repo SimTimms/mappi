@@ -4,11 +4,6 @@ const typeDefs = `#graphql
 ### GEO SCHEMA
 ############################
 
-    input GeoJSONInput {
-        type: String!
-        coordinates: [Float!]!
-    }
-   
     type GeoJSON{
         type: String!
         coordinates: [Float!]!
@@ -18,10 +13,17 @@ const typeDefs = `#graphql
 ### WEATHER SCHEMA
 ############################
 
+    type Tide{
+        tide_type: String,
+        tide_height_mt: String,
+        tide_time: String,
+    }
+
     type Weather{
-        _id: ID!
         weatherType: String!
+        icon:String
         coordinates: GeoJSON!
+        tide:[Tide]
     }
 
 ############################
@@ -29,7 +31,7 @@ const typeDefs = `#graphql
 ############################
 
     type Query{
-        getWeather:[Weather]
+        getWeather(locationName:String!):Weather
     }
         
 `;

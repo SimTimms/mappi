@@ -1,8 +1,8 @@
 import { MarkerType } from "../types/index";
 
 export const center: google.maps.LatLngLiteral = {
-  lat: 51.5074,
-  lng: -0.1278,
+  lat: 50.8179,
+  lng: -0.3729,
 };
 
 export const defaultMarker: MarkerType = {
@@ -15,4 +15,15 @@ export const defaultMarker: MarkerType = {
     fontSize: "16px",
   },
   draggable: false,
+  tide: [],
 };
+
+export const defaultLocations: string[] = [
+  "Worthing",
+  "Brighton",
+  "Shoreham",
+  "Littlehampton",
+  "London",
+  "Paris",
+  "Madrid",
+];

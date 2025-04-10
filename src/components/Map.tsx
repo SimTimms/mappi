@@ -7,6 +7,7 @@ interface MapProps {
   center: google.maps.LatLngLiteral;
   apiKey: string;
   zoom?: number;
+  options?: google.maps.MapOptions;
 }
 
 const Map: React.FC<MapProps> = ({
@@ -15,6 +16,7 @@ const Map: React.FC<MapProps> = ({
   center,
   apiKey,
   zoom = 10,
+  options,
 }: MapProps) => {
   return (
     <LoadScript googleMapsApiKey={apiKey}>
@@ -22,6 +24,9 @@ const Map: React.FC<MapProps> = ({
         mapContainerStyle={mapContainerStyle}
         center={center}
         zoom={zoom}
+        options={{
+          ...(options || null),
+        }}
       >
         {children}
       </GoogleMap>
