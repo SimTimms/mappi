@@ -21,6 +21,7 @@ function App() {
             center={center}
             mapContainerStyle={mapContainerStyle}
             options={defaultMapOptions}
+            data-testid="mock-map"
           >
             <MarkerGroup locations={defaultLocations} />
           </Map>
