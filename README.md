@@ -4,25 +4,23 @@
 
 The MAPPI application consists of a front-end and a back-end (MAPPI API) that work together to provide map-related services. The front-end is built using React and Vite, while the back-end is a Node.js application using GraphQL.
 
+## Usage
+
+The UI shows a map with locations marked by weather icons. Click a weather icon to display more information about that location including tidal data.
+
 ## Prerequisites
 
 - Node.js (version 14 or later)
 - npm (version 6 or later)
 
-## API Environment Variables
-
-The application uses the following environment variables, which should be defined in a `.env` file at the root of the project:
-
-- **PORT**: The PORT number
-- **REDIS_URI**: The URL for a REDIS instance, used for caching responses.
-- **WEATHER_API_KEY**: The API Key for the https://www.weatherapi.com/ service
-
 ## UI Environment Variables
 
 The application uses the following environment variables, which should be defined in a `.env` file at the root of the project:
 
-- **VITE_GOOGLE_API_KEY**: The Google API key used for accessing Google services.
-- **VITE_API_URL**: The URL for the Node API server, typically `http://localhost:3001`.
+```env
+VITE_GOOGLE_API_KEY = YOUR
+VITE_API_URL = http://localhost:3001
+```
 
 ## Running the Front-End
 
